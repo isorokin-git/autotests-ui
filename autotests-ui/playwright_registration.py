@@ -18,4 +18,5 @@ with sync_playwright() as playwright:
     reg_button.click()
 
     dashboard_label = page.get_by_test_id('dashboard-toolbar-title-text')
+    expect(dashboard_label).to_be_visible()
     expect(dashboard_label).to_have_text('Dashboard')
