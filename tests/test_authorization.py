@@ -3,8 +3,7 @@ import pytest
 
 @pytest.mark.authorization
 @pytest.mark.regression
-@pytest.mark.parametrize('email, '
-                         'password',
+@pytest.mark.parametrize('email, password',
                          [("user.name@gmail.com", "password"),
                           ("user.name@gmail.com", "  " ),
                           ("  ", "password")
