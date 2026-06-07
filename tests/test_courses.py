@@ -8,12 +8,12 @@ from fixtures.browsers import chromium_page_with_state
 @pytest.mark.regression
 def test_empty_courses_list(courses_list_page_with_state: CoursesListPage):
     courses_list_page_with_state.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses")
-    # Добавили проверку Navbar компонента на странице Dashboard
     courses_list_page_with_state.navbar.check_visible("username")
     courses_list_page_with_state.sidebar.check_visible()
     courses_list_page_with_state.check_visible_courses_title()
     courses_list_page_with_state.check_visible_empty_view()
     courses_list_page_with_state.check_visible_create_course_button()
+
 @pytest.mark.courses
 @pytest.mark.regression
 def test_create_course(courses_list_page: CourseListPage, create_course_page: CreateCoursePage):
